@@ -1,2 +1,4 @@
 # SaveLinks
-Small C program to open and append a link in markdown formatting to a file
+I made this program to allow me to easily save links to sites I want to remember to a markdown file. I wanted to be able to give the links a relavent title, hance why I am using markdown. Since markdown is just plain text, I could write to the file using markdown syntax to have it be auto formatted. 
+
+The C program works in conjuction with an [Automator](https://support.apple.com/guide/automator/welcome/mac) workflow/application. When I copy a link to the clipboard, I then can run the Automator application as I would any other application. The application asks the user for what the name of the link should be and grabs the URL on the clipboard. These to items are then passed to a shell script action that runs the C file executable with the items as command line arguments. The C program then does the rest to open the given file and append `[Link Name](passed URL)` to it. 
